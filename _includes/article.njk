@@ -1,9 +1,12 @@
 ---
 layout: base.njk
 ---
-<article>
-  <span class="eyebrow">Resources</span>
-  <h1>{{ title }}</h1>
-  <p class="meta">{{ date | readableDate }}</p>
-  {{ content | safe }}
-</article>
+<div class="about">
+  <article>
+    <a href="/resources/" class="eyebrow">Back to Resources</a>
+    <h1>{{ title }}</h1>
+    <p class="meta">{{ date | readableDate }}</p>
+    {% if image %}<img src="{{ image }}" alt="{{ title }}" class="featured-image">{% endif %}
+    {{ content | safe }}
+  </article>
+</div>

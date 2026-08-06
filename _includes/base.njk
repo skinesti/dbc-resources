@@ -26,13 +26,26 @@
       </div>
     </div>
   </header>
-  <main class="wrap">
-    {{ content | safe }}
+  <main>
+    <div class="wrap">
+      {{ content | safe }}
+    </div>
   </main>
   <footer>
     <div class="wrap">
-      <img class="logo-img" src="/images/dbc-logo-white.png" alt="Design by Cristina">
-      <small>&copy; 2026 Design by Cristina</small>
+      <a class="logo" href="https://designbycristina.com">
+        <img src="/images/dbc-logo-white.png" alt="Design by Cristina" class="logo-img">
+      </a>
+      <div class="footlinks">
+        <a href="https://designbycristina.com/#app">Forms App</a>
+        <a href="https://designbycristina.com/#solutions">Solutions</a>
+        <a href="https://designbycristina.com/#services">Services</a>
+        <a href="https://designbycristina.com/pricing.html">Pricing</a>
+        <a href="https://designbycristina.com/portfolio.html">Portfolio</a>
+        <a href="/resources/">Resources</a>
+        <a href="https://designbycristina.com/#contact">Contact</a>
+      </div>
+      <small>&copy; 2026 Design by Cristina. All rights reserved.</small>
     </div>
   </footer>
 </body>

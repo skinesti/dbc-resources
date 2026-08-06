@@ -85,10 +85,8 @@ p{margin:0 0 1em;color:var(--ink-soft);}
 header{
   position:sticky;top:0;z-index:50;
   background:#f6faf9;
-  border-bottom:1px solid transparent;
-  transition:border-color .3s ease;
+  border-bottom:1px solid var(--line);
 }
-header.scrolled{border-color:var(--line);}
 .nav{
   display:flex;align-items:center;justify-content:space-between;
   padding:20px 32px;max-width:var(--maxw);margin:0 auto;
@@ -194,7 +192,7 @@ section.alt{background:var(--bg);}
 .offer-list p{margin:0;font-size:.95rem;}
 
 /* ---------- about ---------- */
-.about{max-width:680px;}
+.about{max-width:680px;margin:0 auto;padding:70px 0 100px;}
 .about .signature-line{
   width:64px;height:2px;background:var(--clay);margin:28px 0;
 }
@@ -308,20 +306,23 @@ section#app{
 }
 
 /* ---------- resources: article page ---------- */
-main{padding:70px 0 100px;}
-article .eyebrow{display:block;margin-bottom:1em;}
+main{padding:70px 0 100px;background:var(--surface);}
+article .eyebrow{display:inline-block;margin-bottom:1em;border-bottom:1px solid var(--ink);}
+article h1{font-size:clamp(1.8rem,3vw,2.4rem);}
 article .meta{font-size:.85rem;color:var(--sage);margin-bottom:2.4em;}
-article img{border-radius:4px;margin:2em 0;}
-article h2{margin-top:1.6em;}
+.featured-image{max-width:100%;height:auto;display:block;border-radius:4px;margin-bottom:2.4em;}
+article img{max-width:100%;height:auto;display:block;border-radius:4px;margin:2em 0;}
+article h2{margin-top:1.6em;font-size:1.5rem;}
 article a{color:var(--teal);border-bottom:1px solid var(--clay);}
 
 /* ---------- resources: listing page ---------- */
 .listing{padding:70px 0 100px;}
 .listing-head{max-width:620px;margin-bottom:56px;}
-.article-list{list-style:none;margin:0;padding:0;}
+.listing-head h1{font-size:clamp(2.1rem,3.6vw,2.9rem);}
+.article-list{list-style:none;margin:0 auto;padding:0;max-width:680px;}
 .article-card{border-bottom:1px solid var(--line);padding:32px 0;}
 .article-card:first-child{padding-top:0;}
-.article-card h3{margin-bottom:.3em;font-size:1.3rem;}
+.article-card h3{margin-bottom:.3em;font-size:1.5rem;}
 .article-card .meta{font-size:.82rem;color:var(--sage);margin-bottom:.6em;}
 .article-card p{margin-bottom:.8em;}
 .article-card a.readmore{
