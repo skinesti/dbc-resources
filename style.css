@@ -191,9 +191,9 @@ section.alt{background:var(--bg);}
 .offer-list h4{margin:0 0 4px;font-size:1.05rem;font-family:var(--sans);font-weight:600;color:var(--teal-deep);}
 .offer-list p{margin:0;font-size:.95rem;}
 
-/* ---------- about ---------- */
-.about{max-width:680px;margin:0 auto;padding:70px 0 100px;}
-.about .signature-line{
+/* ---------- article-content ---------- */
+.article-content{max-width:680px;margin:0 auto;padding:70px 0 100px;}
+.article-content .signature-line{
   width:64px;height:2px;background:var(--clay);margin:28px 0;
 }
 
