@@ -191,9 +191,9 @@ section.alt{background:var(--bg);}
 .offer-list h4{margin:0 0 4px;font-size:1.05rem;font-family:var(--sans);font-weight:600;color:var(--teal-deep);}
 .offer-list p{margin:0;font-size:.95rem;}
 
-/* ---------- article-content ---------- */
-.article-content{max-width:680px;margin:0 auto;padding:70px 0 100px;}
-.article-content .signature-line{
+/* ---------- about ---------- */
+.about{max-width:680px;}
+.about .signature-line{
   width:64px;height:2px;background:var(--clay);margin:28px 0;
 }
 
@@ -307,6 +307,7 @@ section#app{
 
 /* ---------- resources: article page ---------- */
 main{padding:70px 0 100px;background:var(--surface);}
+.wrap .article-content{max-width:680px;margin:0 auto;padding:70px 0 100px;}
 article .eyebrow{display:inline-block;margin-bottom:1em;border-bottom:1px solid var(--ink);}
 article h1{font-size:clamp(1.8rem,3vw,2.4rem);}
 article .meta{font-size:.85rem;color:var(--sage);margin-bottom:2.4em;}
