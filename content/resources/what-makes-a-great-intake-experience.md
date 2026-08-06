@@ -41,4 +41,4 @@ The stakes are different than, say, booking a table at a restaurant. The intake 
 
 We think of a digital intake experience the same way we think about any part of your client's journey: as something worth designing intentionally, not just implementing functionally. It should feel like it belongs to your practice, not like a form you were handed. It should ask for exactly what's needed, respect your client's time, and leave them with the sense that you're a practice that pays attention, because by the time someone reaches the treatment room, that impression is often already made.
 
-Curious what a thoughtfully designed intake experience actually feels like? Explore the live demo and see it from your client's perspective.
+Curious what a thoughtfully designed intake experience actually feels like? [Explore the live demo and see it from your client's perspective](https://demo.designbycristina.com).
