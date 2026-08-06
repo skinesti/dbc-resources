@@ -321,7 +321,7 @@ article a{color:var(--teal);border-bottom:1px solid var(--clay);}
 .article-list{list-style:none;margin:0;padding:0;}
 .article-card{border-bottom:1px solid var(--line);padding:32px 0;}
 .article-card:first-child{padding-top:0;}
-.article-card h2{margin-bottom:.3em;font-size:1.5rem;}
+.article-card h3{margin-bottom:.3em;font-size:1.3rem;}
 .article-card .meta{font-size:.82rem;color:var(--sage);margin-bottom:.6em;}
 .article-card p{margin-bottom:.8em;}
 .article-card a.readmore{

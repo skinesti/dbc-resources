@@ -1,5 +1,23 @@
 # dbc-resources — Project Notes
 
+## Before Starting Work
+This repo has two independent paths that both commit to origin/main:
+Decap CMS (commits directly from the browser admin panel) and Claude
+Code (commits locally, then pushes on confirmation). Because of this,
+always run `git pull` at the start of a new session, before making any
+changes, to bring in anything committed through the CMS since the last
+Claude Code session. Skipping this risks working from a stale local
+copy or hitting an avoidable merge conflict later.
+
+## Confirmation Rules
+Show a diff and wait for explicit confirmation before saving any change
+to content (articles, roadmap, backlog files) or any structural change
+(templates, new files, config). For small, single-property style/CSS
+tweaks (e.g. a font-size or color value), save directly without waiting
+for diff confirmation, just report what was changed after the fact.
+Pushing to origin/main always requires explicit confirmation regardless
+of change size.
+
 ## What this is
 
 An Eleventy (11ty) static site generator project — **not** a plain
