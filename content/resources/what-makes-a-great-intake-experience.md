@@ -2,7 +2,10 @@
 title: What Makes a Great Intake Experience?
 slug: what-makes-a-great-intake-experience
 date: 2026-08-05
-description: Great digital intake experiences aren't about forms, they're about first impressions. Here's what separates forgettable intake from lasting trust.
+description: Great digital intake experiences aren't about forms, they're about
+  first impressions. Here's what separates forgettable intake from lasting
+  trust.
+image: /images/uploads/styled-stock-photos-27-.jpeg
 ---
 Before your client ever sits in your treatment chair, they've already formed an opinion about your practice. It usually happens earlier than you might expect, not in the treatment room, but in the few quiet minutes they spend filling out paperwork on their phone before an appointment.
 
