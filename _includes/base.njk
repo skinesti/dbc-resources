@@ -5,8 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }} | DBC Resources</title>
   <meta name="description" content="{{ description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  {{ content | safe }}
+  <header>
+    <div class="nav">
+      <a href="https://designbycristina.com">
+        <img class="logo-img" src="/images/dbc-logo-teal.png" alt="Design by Cristina">
+      </a>
+      <div class="navlinks">
+        <a href="https://designbycristina.com/">Home</a>
+        <a href="https://designbycristina.com/#solutions">Solutions</a>
+        <a href="https://designbycristina.com/#app">Forms App</a>
+        <a href="https://designbycristina.com/pricing.html">Pricing</a>
+        <a href="https://designbycristina.com/#about">About</a>
+        <a href="/resources/">Resources</a>
+        <a href="https://designbycristina.com/#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    {{ content | safe }}
+  </main>
+  <footer>
+    <div class="wrap">
+      <img class="logo-img" src="/images/dbc-logo-white.png" alt="Design by Cristina">
+      <small>&copy; 2026 Design by Cristina</small>
+    </div>
+  </footer>
 </body>
 </html>

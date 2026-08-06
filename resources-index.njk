@@ -1,0 +1,23 @@
+---
+layout: base.njk
+permalink: /resources/
+title: Resources
+description: Guides, tips, and updates from Design by Cristina.
+---
+<div class="listing">
+  <div class="listing-head">
+    <span class="eyebrow">Resources</span>
+    <h1>Resources</h1>
+    <p>Guides, tips, and updates from Design by Cristina.</p>
+  </div>
+  <ul class="article-list">
+    {% for article in collections.resources | reverse %}
+    <li class="article-card">
+      <h2><a href="{{ article.url }}">{{ article.data.title }}</a></h2>
+      <p class="meta">{{ article.date | readableDate }}</p>
+      <p>{{ article.data.description }}</p>
+      <a class="readmore" href="{{ article.url }}">Read more</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

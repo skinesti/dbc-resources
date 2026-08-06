@@ -2,7 +2,8 @@
 layout: base.njk
 ---
 <article>
+  <span class="eyebrow">Resources</span>
   <h1>{{ title }}</h1>
-  <p><em>{{ date | readableDate }}</em></p>
+  <p class="meta">{{ date | readableDate }}</p>
   {{ content | safe }}
 </article>
