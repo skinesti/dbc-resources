@@ -1,6 +1,6 @@
 # Acuity Forms Alternative: A Better Intake Experience for Modern Practices
 
-Status: Backlog, not yet written
+Status: Backlog, scheduled as article #4 in the content roadmap (see content-backlog/roadmap.md)
 
 ## Primary Keyword
 Acuity forms alternative
