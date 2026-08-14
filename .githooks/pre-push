@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+#
+# pre-push hook for dbc-resources
+#   1. Blocks the push if local main is behind origin/main (pull-before-push safeguard)
+#   2. Warns (non-blocking) if dbc-site-live's style.css has drifted from
+#      dbc-resources' copy, suggesting sync-style.sh
+#
+# Installed via: git config core.hooksPath .githooks
+
+set -euo pipefail
+
+ZERO_SHA="0000000000000000000000000000000000000000"
+
+# ---------- 1. pull-before-push safeguard ----------
+while read -r local_ref local_sha remote_ref remote_sha; do
+  [ "$remote_ref" = "refs/heads/main" ] || continue
+  [ "$local_sha" = "$ZERO_SHA" ] && continue    # deleting the remote branch, nothing to check
+  [ "$remote_sha" = "$ZERO_SHA" ] && continue   # remote branch doesn't exist yet, nothing to be behind of
+
+  if ! git merge-base --is-ancestor "$remote_sha" "$local_sha" 2>/dev/null; then
+    echo "" >&2
+    echo "ERROR: local main is behind origin/main." >&2
+    echo "Someone (likely the Decap CMS) has committed changes you don't have yet." >&2
+    echo "Run 'git pull' first, then push again." >&2
+    echo "" >&2
+    exit 1
+  fi
+done
+
+# ---------- 2. style.css drift warning (non-blocking) ----------
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+LIVE_STYLE="$REPO_ROOT/../dbc-site/dbc-site-live/style.css"
+LOCAL_STYLE="$REPO_ROOT/style.css"
+
+if [ -f "$LIVE_STYLE" ] && [ -f "$LOCAL_STYLE" ]; then
+  LIVE_HASH="$(shasum -a 256 "$LIVE_STYLE" | awk '{print $1}')"
+  LOCAL_HASH="$(shasum -a 256 "$LOCAL_STYLE" | awk '{print $1}')"
+
+  if [ "$LIVE_HASH" != "$LOCAL_HASH" ]; then
+    echo "" >&2
+    echo "WARNING: dbc-resources/style.css differs from dbc-site-live/style.css." >&2
+    echo "If this push touches styling, consider running ./sync-style.sh first." >&2
+    echo "" >&2
+  fi
+fi
+
+exit 0
