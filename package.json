@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "fetch-style": "curl -fSL --retry 3 -o style.css https://raw.githubusercontent.com/skinesti/dbc-site-live/main/style.css",
+    "build": "npm run fetch-style && eleventy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
