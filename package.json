@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "fetch-style": "curl -fSL --retry 3 -o style.css https://raw.githubusercontent.com/skinesti/dbc-site-live/main/style.css",
-    "build": "npm run fetch-style && eleventy",
+    "fetch-header-footer": "node scripts/fetch-header-footer.js",
+    "build": "npm run fetch-style && npm run fetch-header-footer && eleventy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
