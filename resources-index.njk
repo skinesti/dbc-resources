@@ -20,4 +20,43 @@ description: Thoughtful articles on software, client experience, and intentional
     </li>
     {% endfor %}
   </ul>
+
+  <aside class="shop-callout">
+    <span class="eyebrow">My Picks</span>
+    <h2>What I Actually Use</h2>
+    <p>As a licensed esthetician, I get asked constantly what's actually in my routine. Here's the real list, skincare, serums, and the rest, updated as I try new things.</p>
+    <a class="btn btn-primary" href="https://shopmy.us/shop/aquapura" target="_blank" rel="noopener">Shop My Shelf</a>
+  </aside>
 </div>
+
+{# Page-only styles: style.css is fetched from dbc-site-live at build time, so
+   Resources-specific rules live here where the sync can't overwrite them. #}
+<style>
+  .shop-callout{
+    max-width:680px;
+    margin:64px auto 0;
+    padding:44px 40px;
+    background:var(--bg);
+    border:1px solid var(--line);
+    border-top:3px solid var(--clay);
+    border-radius:3px;
+    text-align:center;
+  }
+  .shop-callout .eyebrow{display:block;margin-bottom:.8em;}
+  .shop-callout h2{
+    font-family:var(--serif);
+    color:var(--teal-deep);
+    font-size:clamp(1.6rem,3vw,2.1rem);
+    margin:0 0 .5em;
+  }
+  .shop-callout p{
+    max-width:520px;
+    margin:0 auto 1.8em;
+    color:var(--ink-soft);
+    font-size:1.02rem;
+    line-height:1.65;
+  }
+  @media(max-width:600px){
+    .shop-callout{padding:36px 24px;margin-top:48px;}
+  }
+</style>
