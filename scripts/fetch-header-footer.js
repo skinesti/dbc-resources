@@ -14,8 +14,9 @@
  *   3. Rewrites the header + footer markup (NOT the script) so it works from
  *      this standalone site, which is proxied under designbycristina.com/resources/:
  *        - root-relative links ("/", "/#x", "/pricing.html") -> absolute on
- *          https://designbycristina.com, EXCEPT "/resources/" which is left as-is
- *          (it correctly points at this site's own index either way)
+ *          https://designbycristina.com, EXCEPT any path under "/resources/"
+ *          (and a bare "/resources"), which stays relative since it correctly
+ *          points at this site's own pages either way
  *        - header logo images/dbc-logo.png -> /images/dbc-logo-teal.png
  *          (this repo ships the teal variant, not dbc-logo.png)
  *        - any other relative images/... -> /images/... (how Eleventy passthrough
