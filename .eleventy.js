@@ -12,6 +12,11 @@ module.exports = function (eleventyConfig) {
     });
   });
 
+  // YYYY-MM-DD for sitemap <lastmod>; falls back to today when no date is given.
+  eleventyConfig.addFilter("isoDate", (dateObj) => {
+    return new Date(dateObj || Date.now()).toISOString().slice(0, 10);
+  });
+
   return {
     dir: {
       input: ".",
