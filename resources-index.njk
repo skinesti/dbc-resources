@@ -8,7 +8,7 @@ description: Thoughtful articles on software, client experience, and intentional
   <div class="listing-head">
     <span class="eyebrow">Resources</span>
     <h1>Better Digital Experiences</h1>
-    <p>Thoughtful articles on software, client experience, and intentional design for service-based businesses.</p>
+    <p>Thoughtful articles on software, client experience, and intentional design for service-based businesses. And because I'll always be an esthetician at heart, here's what's actually in my own skincare routine. <a class="listing-link" href="#what-i-actually-use">What I actually use in skincare</a></p>
   </div>
   <ul class="article-list">
     {% for article in collections.resources | reverse %}
@@ -21,6 +21,7 @@ description: Thoughtful articles on software, client experience, and intentional
     {% endfor %}
   </ul>
 
+  <span id="what-i-actually-use" class="anchor-target" aria-hidden="true"></span>
   <aside class="shop-callout">
     <span class="eyebrow">My Picks</span>
     <h2>What I Actually Use</h2>
@@ -32,6 +33,14 @@ description: Thoughtful articles on software, client experience, and intentional
 {# Page-only styles: style.css is fetched from dbc-site-live at build time, so
    Resources-specific rules live here where the sync can't overwrite them. #}
 <style>
+  .listing-head p a.listing-link{
+    color:var(--teal);
+    border-bottom:1px solid var(--clay);
+  }
+  .anchor-target{
+    display:block;
+    scroll-margin-top:90px;
+  }
   .shop-callout{
     max-width:680px;
     margin:64px auto 0;
