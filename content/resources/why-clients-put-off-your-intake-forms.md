@@ -3,6 +3,7 @@ title: Why Clients Put Off Your Intake Forms
 slug: why-clients-put-off-your-intake-forms
 date: 2026-08-14
 description: Clients rarely refuse your intake form. They put it off, rush it, or finish it last minute. Here's why, and what the delay actually costs you.
+image: /images/uploads/forms-app-on-phone.png
 ---
 Your client shows up for their appointment and pulls out their phone in the waiting room to finish the intake form you sent days ago. Or they finish it standing at your front desk, thumbing through it while you're getting the treatment room ready. The form almost always gets done. It just gets done late, usually rushed, sometimes only after a reminder text or two along the way.
 

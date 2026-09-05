@@ -3,6 +3,7 @@ title: "Acuity Forms Alternative: A Better Intake Experience for Your Practice"
 slug: acuity-forms-alternative
 date: 2026-09-05
 description: Searching for an Acuity forms alternative? Learn what to look for in a digital intake experience your clients actually finish, and why scheduling tools fall short.
+image: /images/uploads/desk_area_resources.jpg
 ---
 If you have gone looking for an Acuity forms alternative, you already know why. Your scheduling tool handles appointments well enough, but the intake step attached to it feels like an afterthought. Long. Generic. Awkward on a phone. Something your clients push through rather than move through.
 
