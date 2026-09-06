@@ -8,7 +8,12 @@
  * rewriting), not a raw file copy.
  *
  * What it does:
- *   1. Fetches dbc-site-live's index.html from GitHub (raw, main branch).
+ *   1. Fetches https://designbycristina.com/partials/site-chrome.html — a
+ *      rendered, marker-delimited export that dbc-site-live publishes from its
+ *      Eleventy build (src/site-chrome.njk). Before dbc-site-live moved to
+ *      Eleventy this fetched that repo's static index.html from GitHub raw;
+ *      the source changed on 2026-09-06. NOTE: this now depends on dbc-site-live
+ *      having deployed at least once, so its partial URL resolves.
  *   2. Pulls the markup between <!-- HEADER-START/END -->,
  *      <!-- FOOTER-START/END -->, and <!-- SCRIPT-START/END -->.
  *   3. Rewrites the header + footer markup (NOT the script) so it works from
@@ -35,7 +40,7 @@ const fs = require('fs');
 const path = require('path');
 
 const SOURCE_URL =
-  'https://raw.githubusercontent.com/skinesti/dbc-site-live/main/index.html';
+  'https://designbycristina.com/partials/site-chrome.html';
 const MAIN_DOMAIN = 'https://designbycristina.com';
 const BASE_NJK = path.join(__dirname, '..', '_includes', 'base.njk');
 const BASE_NJK_REL = path.relative(process.cwd(), BASE_NJK);

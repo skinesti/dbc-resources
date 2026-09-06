@@ -69,3 +69,11 @@ via the `_redirects` proxy) but deploy in completely different ways — this
 one is git-push-to-Netlify, the other is zip/drag-and-drop. Always flag
 any inconsistency noticed between this project's setup and
 `dbc-site-live`'s conventions, since it's easy to conflate the two.
+
+- **Header/footer/nav-script sync source:** `scripts/fetch-header-footer.js`
+  fetches `https://designbycristina.com/partials/site-chrome.html` (a
+  marker-delimited export from `dbc-site-live`'s Eleventy build) at build
+  time and splices it into `_includes/base.njk`. It previously fetched that
+  repo's static `index.html` from GitHub raw; changed 2026-09-06 when
+  `dbc-site-live` migrated to Eleventy. A build here now depends on
+  `dbc-site-live` having deployed at least once.
