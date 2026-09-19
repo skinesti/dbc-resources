@@ -1,0 +1,78 @@
+<aside class="resource-sidebar">
+  <h3 class="resource-sidebar-heading">
+    {% if page.url == "/resources/" %}Jump to an Article{% else %}More from Resources{% endif %}
+  </h3>
+  <ul class="resource-sidebar-list">
+    {% for article in collections.resources | reverse %}
+    <li{% if article.url == page.url %} class="is-current"{% endif %}>
+      {% if article.url == page.url %}
+      <span>{{ article.data.title }}</span>
+      {% else %}
+      <a href="{{ article.url }}">{{ article.data.title }}</a>
+      {% endif %}
+    </li>
+    {% endfor %}
+    <li class="is-pick">
+      <a href="/resources/#what-i-actually-use">My Picks</a>
+    </li>
+  </ul>
+</aside>
+
+<style>
+  .resources-layout{
+    display:grid;
+    grid-template-columns:1fr 280px;
+    gap:56px;
+    align-items:start;
+  }
+  .resource-sidebar{
+    position:sticky;
+    top:140px;
+    padding:28px 24px;
+    background:var(--bg);
+    border:1px solid var(--line);
+    border-radius:3px;
+  }
+  .resource-sidebar-heading{
+    font-family:var(--serif);
+    font-style:italic;
+    font-weight:400;
+    font-size:1.1rem;
+    color:var(--teal-deep);
+    margin:0 0 .9em;
+  }
+  .resource-sidebar-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:.7em;
+  }
+  .resource-sidebar-list a{
+    color:var(--ink);
+    font-size:.92rem;
+    line-height:1.4;
+    border-bottom:1px solid transparent;
+  }
+  .resource-sidebar-list a:hover{
+    color:var(--teal);
+    border-bottom-color:var(--clay);
+  }
+  .resource-sidebar-list li.is-current span{
+    display:block;
+    font-size:.92rem;
+    line-height:1.4;
+    color:var(--ink);
+    opacity:.5;
+  }
+  .resource-sidebar-list li.is-pick{
+    margin-top:.3em;
+    padding-top:.9em;
+    border-top:1px solid var(--line);
+  }
+  @media(max-width:900px){
+    .resources-layout{grid-template-columns:1fr;}
+    .resource-sidebar{position:static;margin-top:48px;}
+  }
+</style>

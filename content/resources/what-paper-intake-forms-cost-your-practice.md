@@ -1,5 +1,5 @@
 ---
-title: What Paper Intake Forms Actually Cost Your Practice
+title: What Paper Intake Forms Cost Your Practice
 slug: what-paper-intake-forms-cost-your-practice
 date: 2026-09-19
 description: Before Clarafide, I ran my own spa on paper intake forms. Here's what those rushed, incomplete forms actually cost me in the treatment room, and why I built something different.
@@ -27,6 +27,8 @@ They'd fill it out in the waiting area, rushed, five or ten minutes before their
 A form handed to you cold, right before an appointment, gets exactly the level of attention that setting allows, which isn't much.
 
 ## What I Caught Too Late
+
+<span class="inline-figure"><img src="/images/uploads/aqua-pura-allergies-step.png" alt="Aqua Pura digital intake form asking about allergies, step 4 of 7"></span>
 
 I'd catch the gaps during the appointment instead of before it. A medication I would have wanted to know about ahead of time. An allergy that would have changed what I planned to use. A detail that only came up once we were already talking in the treatment room.
 

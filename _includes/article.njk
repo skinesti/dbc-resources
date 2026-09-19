@@ -2,11 +2,39 @@
 layout: base.njk
 ---
 <div class="article-content">
-  <article>
-    <a href="/resources/" class="eyebrow">Back to Resources</a>
-    <h1>{{ title }}</h1>
-    <p class="meta">{{ date | readableDate }}</p>
-    {% if image %}<img src="{{ image }}" alt="{{ title }}" class="featured-image">{% endif %}
-    {{ content | safe }}
-  </article>
+  <div class="resources-layout">
+    <article>
+      <a href="/resources/" class="eyebrow">Back to Resources</a>
+      <h1>{{ title }}</h1>
+      <p class="meta">{{ date | readableDate }}</p>
+      {% if image %}<img src="{{ image }}" alt="{{ title }}" class="featured-image">{% endif %}
+      {{ content | safe }}
+    </article>
+    {% include "resources-sidebar.njk" %}
+  </div>
 </div>
+
+<style>
+  .wrap .article-content{max-width:1016px;}
+  article .eyebrow{
+    font-family:var(--serif);
+    font-style:italic;
+    font-weight:400;
+    font-size:1.2rem;
+    text-transform:none;
+    letter-spacing:normal;
+  }
+  article .inline-figure{
+    float:right;
+    max-width:260px;
+    margin:0 0 1.2em 2em;
+  }
+  article .inline-figure img{margin:0;}
+  @media(max-width:600px){
+    article .inline-figure{
+      float:none;
+      max-width:100%;
+      margin:2em auto;
+    }
+  }
+</style>

@@ -5,27 +5,32 @@ title: Better Digital Experiences
 description: Thoughtful articles on software, client experience, and intentional design for service-based businesses.
 ---
 <div class="listing">
-  <div class="listing-head">
-    <span class="eyebrow">Resources</span>
-    <h1>Better Digital Experiences</h1>
-    <p>Thoughtful articles on software, client experience, and intentional design for service-based businesses. And because I'll always be an esthetician at heart, here's what's actually in my own skincare routine. <a class="listing-link" href="#what-i-actually-use">What I actually use in skincare</a></p>
+  <div class="resources-layout">
+    <div class="resources-main">
+      <div class="listing-head">
+        <span class="eyebrow">Resources</span>
+        <h1>Better Digital Experiences</h1>
+        <p>Thoughtful articles on software, client experience, and intentional design for service-based businesses. And because I'll always be an esthetician at heart, here's what's actually in my own skincare routine. <a class="listing-link" href="#what-i-actually-use">What I actually use in skincare</a></p>
+      </div>
+      <ul class="article-list">
+        {% for article in collections.resources | reverse %}
+        <li class="article-card">
+          <h3><a href="{{ article.url }}">{{ article.data.title }}</a></h3>
+          <p class="meta">{{ article.date | readableDate }}</p>
+          <p>{{ article.data.description }}</p>
+          <a class="readmore" href="{{ article.url }}">Read more</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% include "resources-sidebar.njk" %}
   </div>
-  <ul class="article-list">
-    {% for article in collections.resources | reverse %}
-    <li class="article-card">
-      <h3><a href="{{ article.url }}">{{ article.data.title }}</a></h3>
-      <p class="meta">{{ article.date | readableDate }}</p>
-      <p>{{ article.data.description }}</p>
-      <a class="readmore" href="{{ article.url }}">Read more</a>
-    </li>
-    {% endfor %}
-  </ul>
 
   <span id="what-i-actually-use" class="anchor-target" aria-hidden="true"></span>
   <aside class="shop-callout">
     <span class="eyebrow">My Picks</span>
-    <h2>What I Actually Use</h2>
-    <p>As a licensed esthetician, I get asked constantly what's actually in my routine. Here's the real list, skincare, serums, and the rest, updated as I try new things.</p>
+    <h2>What's in my Routine</h2>
+    <p>As a licensed esthetician, I get asked constantly what's in my routine. Here's the real list, skincare, serums, and the rest, updated as I try new things.</p>
     <a class="btn btn-primary" href="https://shopmy.us/shop/skinbycristina" target="_blank" rel="noopener">Shop My Shelf</a>
   </aside>
 </div>
@@ -37,6 +42,7 @@ description: Thoughtful articles on software, client experience, and intentional
     color:var(--teal);
     border-bottom:1px solid var(--clay);
   }
+  .resources-main{min-width:0;}
   .listing .eyebrow{
     font-family:var(--serif);
     font-style:italic;
