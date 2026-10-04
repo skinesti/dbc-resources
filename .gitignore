@@ -2,3 +2,7 @@ node_modules
 _site
 drafts/
 style.css
+
+# Local continuity notes, never publish
+/restart.md
+/backlog.md
